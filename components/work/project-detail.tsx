@@ -1,61 +1,25 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, ExternalLink, Github, Calendar, AlertTriangle, Layers } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { FadeIn } from "@/components/animations/fade-in"
-
-interface Project {
-  id: number
-  title: string
-  slug: string
-  description: string
-  longDescription: string
-  image: string
-  gallery: string[]
-  category: string
-  tags: string[]
-  liveUrl: string
-  githubUrl: string
-  challenge: string
-  solution: string
-  results: string[]
-  year: string
-}
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Calendar,
+  AlertTriangle,
+  Layers,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { FadeIn } from "@/components/animations/fade-in";
+import { Project } from "@/lib/const";
 
 interface ProjectDetailProps {
-  project: Project
+  project: Project;
 }
 
 export function ProjectDetail({ project }: ProjectDetailProps) {
-  // Parse challenge into pain points
-  const painPoints = [
-    "Performance bottlenecks during peak traffic periods causing slow response times.",
-    "Lack of scalable architecture leading to system failures under heavy load.",
-    "Manual processes requiring significant developer intervention and monitoring.",
-  ]
-
-  // Architecture features
-  const architectureFeatures = [
-    {
-      title: "Event Sourcing",
-      description: "Ensured 100% auditability for every system state change, critical for compliance and debugging.",
-    },
-    {
-      title: "Horizontal Scaling",
-      description: "Kubernetes-driven autoscaling allowed the system to handle 10x traffic bursts instantly.",
-    },
-  ]
-
-  // Stats from results
-  const stats = [
-    { value: "99.99%", label: "UPTIME ACHIEVED" },
-    { value: "250ms", label: "AVG LATENCY" },
-    { value: "12M+", label: "PROCESSED/MO" },
-  ]
-
   return (
     <article>
       {/* Hero Section */}
@@ -65,8 +29,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <FadeIn>
             <Link
               href="/work"
-              className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8"
-            >
+              className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Work
             </Link>
@@ -77,7 +40,9 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             <div>
               <FadeIn>
                 <div className="flex items-center gap-3 mb-4">
-                  <Badge variant="outline" className="text-primary border-primary/30">
+                  <Badge
+                    variant="outline"
+                    className="text-primary border-primary/30">
                     {project.category}
                   </Badge>
                   <div className="flex items-center text-muted-foreground text-sm">
@@ -88,17 +53,24 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               </FadeIn>
 
               <FadeIn delay={0.1}>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">{project.title}</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                  {project.title}
+                </h1>
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">{project.description}</p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
               </FadeIn>
 
               <FadeIn delay={0.3}>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="bg-muted text-muted-foreground">
+                    <Badge
+                      key={tag}
+                      variant="secondary"
+                      className="bg-muted text-muted-foreground">
                       {tag}
                     </Badge>
                   ))}
@@ -107,8 +79,13 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
 
               <FadeIn delay={0.4}>
                 <div className="flex gap-3">
-                  <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    asChild
+                    className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       View Live
                     </a>
@@ -116,9 +93,11 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                   <Button
                     asChild
                     variant="outline"
-                    className="border-primary/30 hover:bg-primary/10 bg-transparent text-foreground"
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    className="border-primary/30 hover:bg-primary/10 bg-transparent text-foreground">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
                       Source Code
                     </a>
@@ -130,7 +109,12 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             {/* Main Image */}
             <FadeIn delay={0.2} direction="left">
               <div className="relative aspect-video rounded-xl overflow-hidden border border-border">
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </FadeIn>
           </div>
@@ -143,11 +127,14 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <FadeIn>
             <div className="grid md:grid-cols-[200px_1fr] gap-8 mb-20">
               <div>
-                <h2 className="text-lg font-semibold text-foreground">01. Overview</h2>
+                <h2 className="text-lg font-semibold text-foreground">
+                  01. Overview
+                </h2>
               </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  {project.longDescription.split("\n\n")[0] || project.description}
+                  {project.longDescription.split("\n\n")[0] ||
+                    project.description}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.longDescription.split("\n\n")[1] ||
@@ -161,19 +148,25 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <FadeIn delay={0.1}>
             <div className="grid md:grid-cols-[200px_1fr] gap-8 mb-20">
               <div>
-                <h2 className="text-lg font-semibold text-foreground">02. The Problem</h2>
+                <h2 className="text-lg font-semibold text-foreground">
+                  02. The Problem
+                </h2>
               </div>
               <div className="space-y-6">
                 {/* Critical Pain Points Card */}
                 <div className="bg-card border border-border rounded-xl p-6">
                   <div className="flex items-center gap-2 mb-4">
                     <AlertTriangle className="h-4 w-4 text-accent" />
-                    <span className="text-sm font-medium text-accent">Critical Pain Points</span>
+                    <span className="text-sm font-medium text-accent">
+                      Critical Pain Points
+                    </span>
                   </div>
                   <div className="space-y-3">
-                    {painPoints.map((point, index) => (
+                    {project.painPoints.map((point, index) => (
                       <div key={index} className="flex gap-3">
-                        <span className="text-sm text-accent font-mono">0{index + 1}</span>
+                        <span className="text-sm text-accent font-mono">
+                          0{index + 1}
+                        </span>
                         <p className="text-sm text-muted-foreground">{point}</p>
                       </div>
                     ))}
@@ -181,8 +174,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  {project.challenge ||
-                    "The existing infrastructure was literally buckling under the weight of new user registrations. We weren't just fixing bugs; we were fighting a battle against technical debt that threatened the entire regional expansion strategy."}
+                  {project.challenge}
                 </p>
               </div>
             </div>
@@ -192,27 +184,39 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <FadeIn delay={0.2}>
             <div className="grid md:grid-cols-[200px_1fr] gap-8 mb-20">
               <div>
-                <h2 className="text-lg font-semibold text-foreground">03. The Architecture</h2>
+                <h2 className="text-lg font-semibold text-foreground">
+                  03. The Architecture
+                </h2>
               </div>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
                   We implemented an event-driven architecture using{" "}
-                  <span className="text-foreground font-medium">Node.js</span> for high-performance processing and{" "}
-                  <span className="text-foreground font-medium">Redis</span> for reliable message queuing.
+                  <span className="text-foreground font-medium">Node.js</span>{" "}
+                  for high-performance processing and{" "}
+                  <span className="text-foreground font-medium">Redis</span> for
+                  reliable message queuing.
                 </p>
 
                 {/* Architecture Diagram Placeholder */}
                 <div className="border-2 border-dashed border-border rounded-xl p-12 flex flex-col items-center justify-center">
                   <Layers className="h-10 w-10 text-primary mb-4" />
-                  <span className="text-sm text-muted-foreground">System Architecture Diagram</span>
+                  <span className="text-sm text-muted-foreground">
+                    System Architecture Diagram
+                  </span>
                 </div>
 
                 {/* Feature Cards */}
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {architectureFeatures.map((feature, index) => (
-                    <div key={index} className="bg-card border border-border rounded-lg p-4">
-                      <h4 className="text-sm font-semibold text-foreground mb-2">{feature.title}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{feature.description}</p>
+                  {project.architectureFeatures.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="bg-card border border-border rounded-lg p-4">
+                      <h4 className="text-sm font-semibold text-foreground mb-2">
+                        {feature.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {feature.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -224,40 +228,50 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <FadeIn delay={0.3}>
             <div className="grid md:grid-cols-[200px_1fr] gap-8">
               <div>
-                <h2 className="text-lg font-semibold text-foreground">04. Results</h2>
+                <h2 className="text-lg font-semibold text-foreground">
+                  04. Results
+                </h2>
               </div>
               <div className="space-y-8">
                 {/* Stats */}
                 <div className="flex flex-wrap gap-8 md:gap-12">
-                  {stats.map((stat, index) => (
+                  {project.results.map((stat, index) => (
                     <div key={index}>
-                      <div className="text-3xl md:text-4xl font-bold text-primary">{stat.value}</div>
-                      <div className="text-xs text-muted-foreground tracking-wider mt-1">{stat.label}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-primary">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-muted-foreground tracking-wider mt-1">
+                        {stat.label}
+                      </div>
                     </div>
                   ))}
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  {project.solution ||
-                    "The deployment was a success. We reduced operational costs by 40% through infrastructure optimization and removed the transaction ceiling that was previously capping business growth."}
+                  {project.solution}
                 </p>
 
                 {/* Testimonial Quote */}
                 <div className="bg-card border border-border rounded-xl p-6">
                   <p className="text-muted-foreground italic leading-relaxed mb-4">
-                    "The transition was seamless. We saw immediate improvements in system stability, and for the first
-                    time, our tech isn't the bottleneck for our vision."
+                    {project.testimonial.quote}
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary"></div>
                     <div>
-                      <div className="text-sm font-medium text-foreground">Director of Engineering</div>
-                      <div className="text-xs text-muted-foreground">{project.title}</div>
+                      <div className="text-sm font-medium text-foreground">
+                        {project.testimonial.author}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {project.testimonial.authorTitle}
+                      </div>
                     </div>
                   </div>
                   {/* Quote marks decoration */}
                   <div className="flex justify-end mt-2">
-                    <span className="text-6xl text-muted-foreground/20 font-serif leading-none">"</span>
+                    <span className="text-6xl text-muted-foreground/20 font-serif leading-none">
+                      "
+                    </span>
                   </div>
                 </div>
               </div>
@@ -270,20 +284,26 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
       <section className="py-16 md:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Interested in working together?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Interested in working together?
+            </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-muted-foreground mb-8">
-              I&apos;d love to discuss how I can help bring your project to life.
+              I&apos;d love to discuss how I can help bring your project to
+              life.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="/contact">Start a Conversation</Link>
             </Button>
           </FadeIn>
         </div>
       </section>
     </article>
-  )
+  );
 }

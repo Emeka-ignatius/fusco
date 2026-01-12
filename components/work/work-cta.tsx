@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Mail } from "lucide-react"
-import { FadeIn } from "@/components/animations/fade-in"
+import Link from "next/link";
+import { Mail } from "lucide-react";
+import { FadeIn } from "@/components/animations/fade-in";
 
 export function WorkCTA() {
   return (
@@ -21,15 +21,15 @@ export function WorkCTA() {
               </h2>
 
               <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto mb-8">
-                I'm always interested in hearing about complex systems, scaling bottlenecks, and innovative platforms.
+                I'm always interested in hearing about complex systems, scaling
+                bottlenecks, and innovative platforms.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-background font-medium rounded-full hover:bg-cyan/90 transition-colors"
-                >
+                  className="inline-flex items-center gap-2 px-6 py-3 gradient-text text-background font-medium rounded-full hover:bg-cyan/90 transition-colors">
                   Get in Touch
                   <Mail className="w-4 h-4" />
                 </Link>
@@ -37,8 +37,7 @@ export function WorkCTA() {
                 <Link
                   href="/resume.pdf"
                   target="_blank"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-foreground font-medium rounded-full border border-border hover:bg-muted/50 transition-colors"
-                >
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-foreground font-medium rounded-full border border-border hover:bg-muted/50 transition-colors">
                   View Resume
                 </Link>
               </div>
@@ -47,5 +46,5 @@ export function WorkCTA() {
         </div>
       </FadeIn>
     </section>
-  )
+  );
 }

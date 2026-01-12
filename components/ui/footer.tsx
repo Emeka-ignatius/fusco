@@ -1,12 +1,21 @@
-import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail, MapPin, Calendar, ArrowUpRight } from "lucide-react"
+import Link from "next/link";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  MapPin,
+  Calendar,
+  ArrowUpRight,
+  X,
+} from "lucide-react";
 
 const footerData = {
   navigation: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/work", label: "Work" },
-    { href: "/blog", label: "Blog" },
+    // { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ],
   services: [
@@ -17,22 +26,35 @@ const footerData = {
     { label: "Technical Consulting" },
   ],
   resources: [
-    { href: "/blog?category=tutorials", label: "Tutorials" },
-    { href: "/blog?category=engineering", label: "Engineering" },
+    // { href: "/blog?category=tutorials", label: "Tutorials" },
+    { href: "https://palmtechniq.com/courses", label: "Tutorials" },
+    // { href: "/blog?category=engineering", label: "Engineering" },
+    {
+      href: "https://palmtechniq.com/courses/web-development",
+      label: "Engineering",
+    },
     { href: "/work", label: "Case Studies" },
     { href: "/about#timeline", label: "Experience" },
   ],
   social: [
-    { href: "https://github.com", label: "GitHub", icon: Github },
-    { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-    { href: "https://twitter.com", label: "Twitter", icon: Twitter },
-    { href: "mailto:hello@fusco.dev", label: "Email", icon: Mail },
+    {
+      href: "https://github.com/emeka-ignatius",
+      label: "GitHub",
+      icon: Github,
+    },
+    {
+      href: "https://www.linkedin.com/in/emeka-ignatius",
+      label: "LinkedIn",
+      icon: Linkedin,
+    },
+    { href: "https://x.com/OfficialFusco", label: "Twitter", icon: X },
+    { href: "mailto:tech.fusco@gmail.com", label: "Email", icon: Mail },
   ],
-  techStack: ["Next.js", "TypeScript", "React", "Node.js", "PostgreSQL", "AWS"],
-}
+  techStack: ["Next.js", "TypeScript", "React", "TailwindCSS", "Framer Motion"],
+};
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-card border-t border-border">
@@ -48,15 +70,18 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">FUSCO.</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Senior Software Engineer specializing in distributed systems, modern cloud architecture, and
-              high-performance frontend interfaces. Building scalable solutions for complex problems.
+              Senior Software Engineer specializing in distributed systems,
+              modern cloud architecture, and high-performance frontend
+              interfaces. Building scalable solutions for complex problems.
             </p>
 
             {/* Status & Location */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2 text-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-muted-foreground">Available for new projects</span>
+                <span className="text-muted-foreground">
+                  Available for new projects
+                </span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin size={14} className="text-primary" />
@@ -64,14 +89,14 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Calendar size={14} className="text-primary" />
-                <span>5+ years of experience</span>
+                <span>4+ years of experience</span>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="flex gap-3">
               {footerData.social.map((link) => {
-                const Icon = link.icon
+                const Icon = link.icon;
                 return (
                   <a
                     key={link.href}
@@ -79,25 +104,25 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-lg border border-border bg-background flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label={link.label}
-                  >
+                    aria-label={link.label}>
                     <Icon size={18} />
                   </a>
-                )
+                );
               })}
             </div>
           </div>
 
           {/* Navigation Column */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Navigation</h3>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              Navigation
+            </h3>
             <ul className="space-y-3">
               {footerData.navigation.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
-                  >
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group">
                     {link.label}
                     <ArrowUpRight
                       size={12}
@@ -111,11 +136,15 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Services</h3>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              Services
+            </h3>
             <ul className="space-y-3">
               {footerData.services.map((service) => (
                 <li key={service.label}>
-                  <span className="text-muted-foreground text-sm">{service.label}</span>
+                  <span className="text-muted-foreground text-sm">
+                    {service.label}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -123,14 +152,15 @@ export function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              Resources
+            </h3>
             <ul className="space-y-3">
               {footerData.resources.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
-                  >
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group">
                     {link.label}
                     <ArrowUpRight
                       size={12}
@@ -146,10 +176,14 @@ export function Footer() {
         {/* Tech Stack Bar */}
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <span className="text-xs text-muted-foreground uppercase tracking-wider">Built with</span>
+            <span className="text-xs text-muted-foreground uppercase tracking-wider">
+              Built with
+            </span>
             <div className="flex flex-wrap justify-center gap-2">
               {footerData.techStack.map((tech) => (
-                <span key={tech} className="px-3 py-1 text-xs rounded-full border border-border text-muted-foreground">
+                <span
+                  key={tech}
+                  className="px-3 py-1 text-xs rounded-full border border-border text-muted-foreground">
                   {tech}
                 </span>
               ))}
@@ -163,15 +197,19 @@ export function Footer() {
             &copy; {currentYear} Ignatius Emeka Joshua. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              href="/privacy"
+              className="text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              href="/terms"
+              className="text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

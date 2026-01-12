@@ -1,10 +1,10 @@
 {
-  "name": "my-v0-project",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev -p 1001",
     "lint": "eslint .",
     "start": "next start"
   },

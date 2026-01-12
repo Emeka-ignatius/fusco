@@ -1,37 +1,40 @@
-"use client"
+"use client";
 
-import { FadeIn } from "@/components/animations/fade-in"
-import { StaggerChildren, StaggerItem } from "@/components/animations/stagger-children"
-import { SectionHeading } from "@/components/ui/section-heading"
-import { Quote } from "lucide-react"
-import Image from "next/image"
+import { FadeIn } from "@/components/animations/fade-in";
+import {
+  StaggerChildren,
+  StaggerItem,
+} from "@/components/animations/stagger-children";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { Quote } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
     id: 1,
     quote:
       "Ignatius delivered exceptional work on our platform. His attention to detail and problem-solving skills are outstanding. The project was completed ahead of schedule.",
-    author: "Sarah Chen",
-    title: "CTO at TechStart",
+    author: "Ruby",
+    title: "Director at Hygiapro Services",
     avatar: "/professional-woman-headshot.png",
   },
   {
     id: 2,
     quote:
       "Working with FUSCO was a game-changer for our business. He understood our requirements perfectly and built a solution that exceeded our expectations.",
-    author: "Michael Roberts",
-    title: "Founder, Digital Agency",
+    author: "MH Samrat",
+    title: "CEO at Mi Plus",
     avatar: "/professional-man-headshot.png",
   },
   {
     id: 3,
     quote:
       "His technical expertise combined with excellent communication made the entire development process smooth and enjoyable. Highly recommended!",
-    author: "Emily Watson",
-    title: "Product Manager",
+    author: "Blessing",
+    title: "Architect",
     avatar: "/professional-woman-smiling-headshot.png",
   },
-]
+];
 
 export function TestimonialsSection() {
   return (
@@ -45,7 +48,9 @@ export function TestimonialsSection() {
           />
         </FadeIn>
 
-        <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.15}>
+        <StaggerChildren
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          staggerDelay={0.15}>
           {testimonials.map((testimonial) => (
             <StaggerItem key={testimonial.id}>
               <div className="h-full p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors">
@@ -65,8 +70,12 @@ export function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.title}</div>
+                    <div className="font-semibold text-foreground">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {testimonial.title}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -75,5 +84,5 @@ export function TestimonialsSection() {
         </StaggerChildren>
       </div>
     </section>
-  )
+  );
 }

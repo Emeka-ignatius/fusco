@@ -1,41 +1,44 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, ArrowUpRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { FadeIn } from "@/components/animations/fade-in"
-import { StaggerChildren, StaggerItem } from "@/components/animations/stagger-children"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FadeIn } from "@/components/animations/fade-in";
+import {
+  StaggerChildren,
+  StaggerItem,
+} from "@/components/animations/stagger-children";
 
 const featuredProject = {
-  title: "E-Commerce Platform",
+  title: "Transport Management & Revenue Collection System",
   description:
-    "A robust enterprise-grade commerce engine. Processing thousands of daily transactions with 99.9% uptime and complex multi-vendor settlement logic.",
-  image: "/modern-e-commerce-dashboard-interface-dark-theme.jpg",
-  categories: ["Payments", "Enterprise"],
+    "A comprehensive digital infrastructure for nationwide transportation management. Processing secure levy collections with real-time vehicle tracking, advanced encryption, and 95% collection efficiency across major cities.",
+  image: "/transport-revenue-collection-system.png",
+  categories: ["FinTech", "Logistics"],
   year: "2024",
   status: "Live Production",
-  slug: "e-commerce-platform",
-}
+  slug: "transport-management-system",
+};
 
 const secondaryProjects = [
   {
-    title: "AI Task Manager",
+    title: "Whiten Lighten Dental Practice Management",
     description:
-      "Intelligent task management platform featuring real-time prioritization, AI-powered scheduling, and workflow optimization for modern teams.",
-    categories: ["AI/ML", "SaaS"],
-    techStack: ["TS", "NX", "AI"],
-    slug: "ai-task-manager",
+      "A bespoke Electronic Medical Records (EMR) system for a celebrity dental practice, streamlining patient management, appointments, and treatment plans.",
+    categories: ["Healthcare", "EMR"],
+    techStack: ["Next.js", "Node.js", "PostgreSQL"],
+    slug: "whiten-lighten-emr",
   },
   {
-    title: "Analytics Dashboard",
+    title: "PalmTechnIQ E-Learning Platform",
     description:
-      "A comprehensive real-time analytics suite. Transforming raw data into actionable insights with custom visualizations for enterprise clients.",
-    categories: ["Data", "Enterprise"],
-    techStack: ["R", "D3", "PG"],
-    slug: "analytics-dashboard",
+      "An interactive e-learning platform offering diverse tech courses, from web development to cybersecurity, with hands-on projects and expert instructors.",
+    categories: ["Education", "LMS"],
+    techStack: ["React", "Nextjs", "PostgreSQL"],
+    slug: "palmtechniq-e-learning",
   },
-]
+];
 
 export function FeaturedWork() {
   return (
@@ -48,25 +51,28 @@ export function FeaturedWork() {
             <div className="lg:max-w-xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-px bg-primary" />
-                <span className="text-xs font-medium tracking-[0.2em] uppercase text-primary">Featured Works</span>
+                <span className="text-xs font-medium tracking-[0.2em] uppercase text-primary">
+                  Featured Works
+                </span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
                 <span className="text-foreground">Scaling platforms</span>
                 <br />
-                <span className="text-muted-foreground font-normal italic">with precision.</span>
+                <span className="text-muted-foreground font-normal italic">
+                  with precision.
+                </span>
               </h2>
             </div>
 
             {/* Right: Description + Link */}
             <div className="lg:max-w-sm lg:pt-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A selection of industrial-grade platforms built for high-throughput, security, and exceptional user
-                experience.
+                A selection of industrial-grade platforms built for
+                high-throughput, security, and exceptional user experience.
               </p>
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
-              >
+                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
                 View all projects
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -76,7 +82,9 @@ export function FeaturedWork() {
 
         {/* Featured Project Card (Large) */}
         <FadeIn delay={0.1}>
-          <Link href={`/work/${featuredProject.slug}`} className="block group mb-6">
+          <Link
+            href={`/work/${featuredProject.slug}`}
+            className="block group mb-6">
             <article className="bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/30 transition-all duration-300">
               <div className="grid lg:grid-cols-2 gap-6 lg:gap-0">
                 {/* Left: Content */}
@@ -87,8 +95,7 @@ export function FeaturedWork() {
                       {featuredProject.categories.map((cat) => (
                         <span
                           key={cat}
-                          className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20"
-                        >
+                          className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
                           {cat}
                         </span>
                       ))}
@@ -100,7 +107,9 @@ export function FeaturedWork() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-muted-foreground leading-relaxed mb-8">{featuredProject.description}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-8">
+                      {featuredProject.description}
+                    </p>
                   </div>
 
                   {/* Bottom: CTA + Meta */}
@@ -130,18 +139,21 @@ export function FeaturedWork() {
         </FadeIn>
 
         {/* Secondary Projects Grid */}
-        <StaggerChildren className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
+        <StaggerChildren
+          className="grid md:grid-cols-2 gap-6"
+          staggerDelay={0.1}>
           {secondaryProjects.map((project) => (
             <StaggerItem key={project.slug}>
-              <Link href={`/work/${project.slug}`} className="block group h-full">
+              <Link
+                href={`/work/${project.slug}`}
+                className="block group h-full">
                 <article className="h-full bg-card rounded-2xl border border-border p-6 lg:p-8 hover:border-primary/30 transition-all duration-300 flex flex-col">
                   {/* Category Badges */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.categories.map((cat) => (
                       <span
                         key={cat}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border"
-                      >
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border">
                         {cat}
                       </span>
                     ))}
@@ -153,7 +165,9 @@ export function FeaturedWork() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+                    {project.description}
+                  </p>
 
                   {/* Bottom: Explore Link + Tech Stack */}
                   <div className="flex items-center justify-between">
@@ -163,12 +177,11 @@ export function FeaturedWork() {
                     </span>
 
                     {/* Tech Stack Badges */}
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="w-8 h-8 flex items-center justify-center text-xs font-mono font-medium rounded bg-muted text-muted-foreground border border-border"
-                        >
+                          className="w-full h-full py-2 px-4 flex items-center justify-center text-xs font-mono font-medium rounded bg-muted text-muted-foreground border border-border">
                           {tech}
                         </span>
                       ))}
@@ -181,5 +194,5 @@ export function FeaturedWork() {
         </StaggerChildren>
       </div>
     </section>
-  )
+  );
 }
