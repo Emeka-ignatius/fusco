@@ -37,7 +37,7 @@ export function AboutCTA() {
               variant="outline"
               className="border-primary/30 text-foreground hover:bg-primary/10 min-w-[160px] bg-transparent"
             >
-              <a href="/resume.pdf" download>
+              <a href="/lib/IgnatiusEmeka.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>

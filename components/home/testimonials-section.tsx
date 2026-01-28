@@ -13,10 +13,10 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Ignatius delivered exceptional work on our platform. His attention to detail and problem-solving skills are outstanding. The project was completed ahead of schedule.",
+      "Emeka delivered exceptional work on our platform. His attention to detail and problem-solving skills are outstanding. The project was completed ahead of schedule.",
     author: "Ruby",
     title: "Director at Hygiapro Services",
-    avatar: "/professional-woman-headshot.png",
+    avatar: `https://ui-avatars.com/api/?name=Ruby&background=random&color=fff&size=128`,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const testimonials = [
       "Working with FUSCO was a game-changer for our business. He understood our requirements perfectly and built a solution that exceeded our expectations.",
     author: "MH Samrat",
     title: "CEO at Mi Plus",
-    avatar: "/professional-man-headshot.png",
+    avatar: `https://ui-avatars.com/api/?name=MH+Samrat&background=random&color=fff&size=128`,
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const testimonials = [
       "His technical expertise combined with excellent communication made the entire development process smooth and enjoyable. Highly recommended!",
     author: "Blessing",
     title: "Architect",
-    avatar: "/professional-woman-smiling-headshot.png",
+    avatar: `https://ui-avatars.com/api/?name=Blessing&background=random&color=fff&size=128`,
   },
 ];
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const techStack = ["NEXT.JS", "TYPESCRIPT", "NODE.JS", "REACT", "PYTHON"];
+const techStack = ["NEXT.JS", "TYPESCRIPT", "NODE.JS", "REACT", "NESTJS"];
 
 export function HeroSection() {
   return (

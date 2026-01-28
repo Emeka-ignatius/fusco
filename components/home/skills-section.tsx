@@ -37,7 +37,7 @@ const principles = [
   },
 ]
 
-const techStack = ["POSTGRESQL", "KUBERNETES", "TYPESCRIPT", "GRAPHQL"]
+const techStack = ["POSTGRESQL", "KUBERNETES", "TYPESCRIPT"]
 
 export function SkillsSection() {
   return (

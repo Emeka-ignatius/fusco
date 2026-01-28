@@ -21,7 +21,7 @@ export function AboutHero() {
           >
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-border">
               <Image
-                src="/professional-software-engineer-portrait-dark-backg.png"
+                src="/my-portfolio-image.jpeg"
                 alt="Ignatius Emeka Joshua"
                 fill
                 className="object-cover"
@@ -53,7 +53,7 @@ export function AboutHero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance"
             >
-              Hi, I&apos;m <span className="gradient-text">Ignatius</span>
+              Hi, I&apos;m <span className="text-primary">Ignatius</span>
             </motion.h1>
 
             <motion.p
@@ -62,7 +62,7 @@ export function AboutHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 text-pretty"
             >
-              A passionate Software Engineer with over 5 years of experience crafting digital solutions that make a
+              A passionate Software Engineer with over 4 years of experience crafting digital solutions that make a
               difference. I believe in writing clean, efficient code and creating user experiences that people love.
             </motion.p>
 
@@ -78,11 +78,11 @@ export function AboutHero() {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Briefcase className="h-5 w-5 text-primary" />
-                <span>Senior Software Engineer</span>
+                <span>Mid-Level Software Engineer</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <GraduationCap className="h-5 w-5 text-primary" />
-                <span>B.Sc. Computer Science</span>
+                <span>ADSE. Software Engineering</span>
               </div>
             </motion.div>
           </div>

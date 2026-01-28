@@ -185,10 +185,10 @@ TypeScript is a powerful tool that can significantly improve your code quality. 
   },
   {
     id: 3,
-    title: "From Junior to Senior: A Developer's Journey",
-    slug: "junior-to-senior-journey",
+    title: "From Junior to Mid-Level: A Developer's Journey",
+    slug: "junior-to-mid-level-journey",
     excerpt:
-      "Reflecting on my growth from a junior developer to a senior engineer, and the lessons learned along the way.",
+      "Reflecting on my growth from a junior developer to a Mid-Level engineer, and the lessons learned along the way.",
     content: `
 ## The Beginning
 
@@ -222,7 +222,7 @@ This was when I started going deeper into technologies. I understood not just ho
 
 ## Year 4-5: Leadership
 
-The transition to senior engineer was about more than technical skills. It required:
+The transition to mid-level engineer was about more than technical skills. It required:
 
 - **Communication**: Explaining complex concepts simply
 - **Empathy**: Understanding team dynamics

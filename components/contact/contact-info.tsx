@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
+import { ScheduleCallButton } from "@/components/contact/schedule-call-button";
 
 const contactMethods = [
   {
@@ -37,17 +38,17 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/emeka-ignatius",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/emeka-ignatius",
   },
   {
     icon: Twitter,
     label: "Twitter",
-    href: "https://twitter.com",
+    href: "https://x.com/OfficialFusco",
   },
 ];
 
@@ -131,13 +132,11 @@ export function ContactInfo() {
           <p className="text-muted-foreground text-sm mb-4">
             Schedule a 30-minute call to discuss your project in detail.
           </p>
-          <Button
-            asChild
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              Schedule a Call
-            </a>
-          </Button>
+          <ScheduleCallButton
+            fullWidth
+            variant="default"
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
+          />
         </div>
       </FadeIn>
     </div>

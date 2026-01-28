@@ -5,57 +5,57 @@ import { FadeIn } from "@/components/animations/fade-in"
 const timelineItems = [
   {
     year: "2025",
-    title: "Platform Architect",
-    company: "Global Fintech Solutions",
+    title: "Technical Lead Developer",
+    company: "ISCE Digital Concept",
     project: {
       title: "Multi-Module Infrastructure",
       description:
-        "Leading the architectural redesign of a core banking platform into a modular service mesh. Reduced deployment cycles by 40% and improved developer onboarding speed through standardized SDKs.",
-      tech: ["GOLANG", "KUBERNETES", "GRPC"],
+        "Leading the architectural redesign of a core transport revenue collection system into a modular service mesh. Working with a team of 5 developers to deliver a high-performance, scalable, and maintainable system.",
+      tech: ["TYPESCRIPT", "NEXT.JS", "NESTJS", "INTERSWITCH", "REST API", "WEBSOCKETS", "REDUX", "POSTGRESQL", "REDIS", "NODE.JS"],
     },
   },
   {
     year: "2024",
-    title: "Lead Revenue Engineer",
-    company: "GovTech Authority",
+    title: "Technical Lead Developer",
+    company: "ISCE Digital Concept",
     project: {
       title: "National Revenue System",
       description:
         "Engineered a high-throughput revenue collection system for national government use. Successfully processed over ₦1.2B in transactions annually with zero downtime during peak tax seasons.",
-      tech: ["NODE.JS", "POSTGRESQL", "REDIS"],
+      tech: ["TYPESCRIPT", "NEXT.JS", "NESTJS", "INTERSWITCH", "REST API", "WEBSOCKETS", "REDUX", "POSTGRESQL", "REDIS", "NODE.JS"],
     },
   },
   {
     year: "2023",
-    title: "Senior Fullstack Engineer",
-    company: "ScaleUp Labs",
+    title: "Frontend Developer",
+    company: "ISCE Digital Concept",
     project: {
       title: "Enterprise Data Dashboards",
       description:
         "Developed complex real-time visualization tools for enterprise clients. Focused on performance optimization for large-scale datasets, reducing frontend render times by 65%.",
-      tech: ["REACT", "D3.JS", "GRAPHQL"],
+      tech: ["REACT", "NEXT.JS", "TYPESCRIPT"],
     },
   },
+  // {
+  //   year: "2022",
+  //   title: "Technical Lead Developer",
+  //   company: "ISCE Digital Concept",
+  //   project: {
+  //     title: "Distributed Database Migration",
+  //     description:
+  //       "Orchestrated a zero-downtime migration of 50TB+ of user data from legacy monolith to a distributed microservices database architecture.",
+  //     tech: ["PYTHON", "AWS", "MONGODB"],
+  //   },
+  // },
   {
     year: "2022",
-    title: "Backend Developer",
-    company: "CloudPioneer Tech",
-    project: {
-      title: "Distributed Database Migration",
-      description:
-        "Orchestrated a zero-downtime migration of 50TB+ of user data from legacy monolith to a distributed microservices database architecture.",
-      tech: ["PYTHON", "AWS", "MONGODB"],
-    },
-  },
-  {
-    year: "2021",
-    title: "Software Engineer",
-    company: "E-Commerce Start",
+    title: "Junior Frontend Developer",
+    company: "ISCE Digital Concept",
     project: {
       title: "Checkout Engine Overhaul",
       description:
         "Rebuilt the core checkout flow using a headless commerce approach, resulting in a 15% increase in conversion rates for mobile users.",
-      tech: ["TYPESCRIPT", "NEXT.JS", "STRIPE"],
+      tech: ["TYPESCRIPT", "NEXT.JS", "PAYSTACK"],
     },
   },
 ]

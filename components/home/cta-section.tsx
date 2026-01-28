@@ -2,9 +2,10 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Calendar } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
+import { ScheduleCallButton } from "@/components/contact/schedule-call-button"
 
 export function CTASection() {
   return (
@@ -41,7 +42,7 @@ export function CTASection() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
         <FadeIn>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Ready to Build Something <span className="gradient-text">Amazing</span> Together?
+            Ready to Build Something <span className="text-primary">Amazing</span> Together?
           </h2>
         </FadeIn>
 
@@ -64,17 +65,11 @@ export function CTASection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button
-              asChild
+            <ScheduleCallButton
               size="lg"
               variant="outline"
               className="border-foreground/20 text-foreground hover:bg-foreground/10 min-w-[180px] bg-transparent"
-            >
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-4 w-4" />
-                Schedule a Call
-              </a>
-            </Button>
+            />
           </div>
         </FadeIn>
       </div>
