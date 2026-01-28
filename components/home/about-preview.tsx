@@ -57,7 +57,7 @@ export function AboutPreview() {
 
             <FadeIn delay={0.2}>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-pretty">
-                With over 5 years of experience in software engineering, I
+                With over 4 years of experience in software engineering, I
                 specialize in building robust, scalable applications that solve
                 real-world problems. My journey has taken me through startups,
                 agencies, and enterprise projects, giving me a unique

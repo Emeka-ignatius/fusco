@@ -35,7 +35,7 @@ export function WorkCTA() {
                 </Link>
 
                 <Link
-                  href="/resume.pdf"
+                  href="/api/cv"
                   target="_blank"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-foreground font-medium rounded-full border border-border hover:bg-muted/50 transition-colors">
                   View Resume
