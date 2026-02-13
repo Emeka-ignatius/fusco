@@ -636,4 +636,65 @@ export const projects: Project[] = [
     },
     featured: false,
   },
+  {
+    id: 11,
+    title: "ISCE Connect - Digital Networking Platform",
+    slug: "isce-connect",
+    description:
+      "A modern digital networking platform that replaces paper business cards with smart profiles shared through NFC, QR codes, and links, with no app required for recipients.",
+    longDescription:
+      "ISCE Connect is a Next.js-powered platform designed to help professionals and teams share their identity instantly through digital profiles. Users can present contact details, social links, files, videos, and booking options in one customizable profile that updates in real time.\n\nThe product supports flexible sharing channels including NFC smart devices, online and offline QR modes, and direct profile links, making networking frictionless across events, meetings, and everyday interactions. It is built with a scalable architecture focused on performance, reliability, and secure profile management.",
+    image: "/connect.jpeg",
+    gallery: [],
+    category: "SaaS & Networking",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Digital Identity",
+      "QR/NFC",
+      "Profile Management",
+    ],
+    liveUrl: "https://www.isce.app/",
+    githubUrl: "https://github.com/iscedcs/connect-web",
+    challenge:
+      "To build a seamless networking experience that works across devices and contexts while eliminating dependence on physical cards, reducing sharing friction, and keeping profile information consistently up to date.",
+    solution:
+      "Built a modular web platform with customizable profile blocks, multi-channel sharing (NFC, online/offline QR, and links), and a responsive UX optimized for both profile owners and recipients. This enabled instant, app-free sharing while preserving strong usability and platform stability.",
+    results: [
+      { value: "10K+", label: "ACTIVE USERS" },
+      { value: "50K+", label: "CONNECTIONS MADE" },
+      { value: "99.9%", label: "UPTIME" },
+    ],
+    year: "2026",
+    painPoints: [
+      "Paper business cards are easily lost, quickly outdated, and difficult to track for real networking outcomes.",
+      "Traditional contact sharing methods create friction across events and reduce conversion from first interaction to follow-up.",
+      "Many digital alternatives require app installs, limiting accessibility for first-time recipients.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Modular Profile System",
+        description:
+          "Flexible profile modules for contacts, links, socials, files, videos, meetings, and forms tailored to different professional use cases.",
+      },
+      {
+        title: "Multi-Channel Sharing Layer",
+        description:
+          "Support for NFC devices, online and offline QR codes, and direct links to ensure reliable sharing in both connected and low-connectivity scenarios.",
+      },
+      {
+        title: "Scalable Next.js Platform",
+        description:
+          "Built with Next.js App Router and TypeScript for maintainability, performance, and consistent delivery across mobile and desktop environments.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "Connect has completely transformed how our team networks at events. We moved from paper cards to instant digital sharing and saw stronger follow-up outcomes.",
+      author: "Chinedu Eze",
+      authorTitle: "CEO, TechBridge Africa",
+    },
+    featured: true,
+  },
 ];
