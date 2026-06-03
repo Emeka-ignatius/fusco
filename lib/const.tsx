@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "Transpay is a revolutionary transportation management platform designed to ensure the safe and easy collection of levies using secure, user-friendly systems. The platform serves as a digital backbone for transportation authorities, enabling them to transform traditional, manual processes into a streamlined, transparent, and highly efficient digital ecosystem.\n\nKey features include real-time vehicle location tracking via proprietary Smart Fairflex devices, secure financial transactions with military-grade encryption, and role-specific dashboards that provide complete visibility to all stakeholders. The system has successfully registered over 500,000 vehicles and achieved a 95% collection efficiency rate.",
     image: "/transport-revenue-collection-system.png",
     gallery: [],
-    category: "FinTech & Logistics",
+    category: "GovTech & Transit",
     tags: [
       "Next.js",
       "TypeScript",
@@ -52,6 +52,8 @@ export const projects: Project[] = [
       "Advanced Encryption",
       "Real-time Analytics",
       "IoT Integration",
+      "Redis",
+      "Interswitch"
     ],
     liveUrl: "https://www.transpayedo.com",
     githubUrl: "https://github.com/iscedcs/transpay-edo.git", // Placeholder for now
@@ -154,7 +156,7 @@ export const projects: Project[] = [
       author: "Local Business Owner",
       authorTitle: "Ariari Vendor",
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -212,7 +214,7 @@ export const projects: Project[] = [
     testimonial: {
       quote:
         "Dr. Whiten Lighten transformed my smile completely. The professionalism and attention to detail is unmatched. I feel confident on camera every day!",
-      author: "Sarah Johnson",
+      author: "Made Of Roses",
       authorTitle: "TV Host",
     },
     featured: false,
@@ -230,20 +232,21 @@ export const projects: Project[] = [
     category: "Education",
     tags: [
       "React",
-      "Node.js",
-      "MongoDB",
+      "Next.Js",
+      "Server Action",
+      "Postgresql",
       "E-Learning",
       "LMS",
       "Web Development",
     ],
-    liveUrl: "https://palmtechniq-v2.vercel.app",
+    liveUrl: "https://www.palmtechniq.com",
     githubUrl: "https://github.com/Emeka-ignatius/palmtechniq-v2.git", // Placeholder for now
     challenge:
       "To create a robust and engaging online learning environment that can host multiple tech courses and cater to a diverse student base, from beginners to advanced learners.",
     solution:
       "Built a scalable LMS with interactive course modules, progress tracking, and integrated assessment tools. The platform emphasizes hands-on learning and provides a seamless educational experience.",
     results: [
-      { value: "50+", label: "LEARNERS" },
+      { value: "100+", label: "LEARNERS" },
       { value: "Expert", label: "INSTRUCTORS" },
       { value: "Cutting-edge", label: "CURRICULUM" },
     ],
@@ -276,7 +279,7 @@ export const projects: Project[] = [
       author: "Lekan John",
       authorTitle: "Frontend Developer",
     },
-    featured: false,
+    featured: true,
   },
   {
     id: 5,
@@ -292,7 +295,6 @@ export const projects: Project[] = [
     tags: [
       "Next.js",
       "React",
-      "Node.js",
       "Booking System",
       "Payment Gateway",
       "Service Management",
@@ -570,7 +572,7 @@ export const projects: Project[] = [
     testimonial: {
       quote:
         "Penny Plan has transformed how I manage my business finances. The insights it provides are invaluable!",
-      author: "Sarah Johnson",
+      author: "Made Of Roses",
       authorTitle: "Small Business Owner",
     },
     featured: false,
@@ -662,8 +664,8 @@ export const projects: Project[] = [
     solution:
       "Built a modular web platform with customizable profile blocks, multi-channel sharing (NFC, online/offline QR, and links), and a responsive UX optimized for both profile owners and recipients. This enabled instant, app-free sharing while preserving strong usability and platform stability.",
     results: [
-      { value: "10K+", label: "ACTIVE USERS" },
-      { value: "50K+", label: "CONNECTIONS MADE" },
+      { value: "1K+", label: "ACTIVE USERS" },
+      { value: "10K+", label: "CONNECTIONS MADE" },
       { value: "99.9%", label: "UPTIME" },
     ],
     year: "2026",
@@ -697,4 +699,136 @@ export const projects: Project[] = [
     },
     featured: true,
   },
+  {
+    id: 12,
+    title: "ISCE Store",
+    slug: "isce-store",
+    description:
+      "A modern, full-featured e-commerce platform built with Next.js for selling custom products with integrated payment processing, order tracking, and multi-role user management.",
+    longDescription:
+      "ISCE Store is a production-ready e-commerce platform built to streamline custom merchandise sales. The application features a dynamic product customizer allowing customers to choose colors, upload custom designs via AWS S3, and preview changes. It integrates Paystack for secure transaction processing, features a robust multi-step checkout flow, and provides real-time order tracking via a visual progress timeline. For site managers, it includes comprehensive admin and superadmin dashboards to manage orders, invoices, and company wallets.",
+    image: "/store.png",
+    gallery: [],
+    category: "E-Commerce & SaaS",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React 19",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth",
+      "Paystack",
+      "AWS S3",
+      "Resend",
+      "GIGL Integration",
+    ],
+    liveUrl: "https://store.isce.tech",
+    githubUrl: "https://github.com/iscedcs/isce-tech-store-web",
+    challenge:
+      "Designing a cohesive checkout experience that handles asynchronous payment confirmations, custom design file uploads, and validation of user addresses in a serverless environment without degrading page responsiveness.",
+    solution:
+      "Leveraged AWS S3 presigned URLs for secure client-side design uploads, integrated a robust multi-step checkout state machine, and utilized Paystack webhooks to reliably update transaction statuses asynchronously in a Neon serverless PostgreSQL database.",
+    results: [
+      { value: "Paystack", label: "SECURE PAYMENTS" },
+      { value: "Real-time", label: "ORDER TRACKING" },
+      { value: "Dynamic", label: "PRODUCT CUSTOMIZATION" },
+    ],
+    year: "2026",
+    painPoints: [
+      "Friction in custom product ordering: Traditional stores struggle to handle custom design uploads and color options seamlessly during checkout.",
+      "Lack of status transparency: Customers often complain about not knowing where their orders are in the processing/shipping queue.",
+      "Fragmented admin visibility: Admins lacked a unified view to track payment verification, update fulfillment states, and generate invoices.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Dynamic Product Customizer",
+        description:
+          "Interactive client-side controls for color selection and custom design image uploads mapped to individual order items.",
+      },
+      {
+        title: "Role-Based Portal Access",
+        description:
+          "Granular separation of duties between standard customers, order-fulfillment Admins, and Superadmins managing corporate wallets and invoices.",
+      },
+      {
+        title: "Event-Driven Payment Lifecycles",
+        description:
+          "Webhook verification systems that automatically handle payment confirmations, database updates, and transactional email triggers.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "The customizer and order tracking pipeline completely removed our communication overhead. Customers know exactly what they are getting and where their order stands.",
+      author: "Victor Itodo",
+      authorTitle: "Product Manager",
+    },
+    featured: true,
+  },
+  {
+    id: 13,
+    title: "Ministry of Transport Platform",
+    slug: "ministry-of-transport",
+    description:
+      "A public services portal and administrative dashboard for transit operations, motor park registration, and compliance management.",
+    longDescription:
+      "The Ministry of Transport Platform is a comprehensive digital GovTech solution designed for regulating state transportation networks. Built as a high-performance Next.js portal, it facilitates motor park registration and inspection workflows, Mass Transit terminal administration, and accident vehicle reporting (AVIR). The application features custom JWT-based authentication across nine distinct roles—ranging from external park owners to transit operators, inspectors, and the Commissioner—providing secure auditing, Paystack fee collection, and AWS S3 document management for verified operators.",
+    image: "/mot.png",
+    gallery: [],
+    category: "GovTech & Transit",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React 19",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Neon Database",
+      "JWT Authentication",
+      "AWS S3",
+      "Paystack",
+      "AVIR Compliance",
+    ],
+    liveUrl: "http://ministry-of-transport-web.vercel.app/",
+    githubUrl: "https://github.com/iscedcs/ministry-of-transport-web.git",
+    challenge:
+      "Coordinating complex regulatory workflows across nine distinct user roles with varying permissions, while managing secure upload of large infrastructure photos and corporate credentials without introducing security vulnerabilities or slowing down the serverless backend.",
+    solution:
+      "Designed a custom role-based access control (RBAC) middleware layer using Jose for lightweight token verification, integrated Neon serverless PostgreSQL for robust relational indexing, and leveraged S3 pre-signed URLs to offload high-volume file uploads directly from the client.",
+    results: [
+      { value: "GovTech", label: "PUBLIC SERVICES PORTAL" },
+      { value: "Form 0051", label: "AVIR COMPLIANCE" },
+      { value: "9 Roles", label: "RBAC WORKFLOWS" },
+    ],
+    year: "2026",
+    painPoints: [
+      "Manual park registration: Intending private park owners struggled with slow, paperwork-heavy approval processes that lacked transparency.",
+      "Regulatory compliance overhead: Inspecting and licensing motor parks required manual checklists that were prone to errors and lost records.",
+      "Unstructured accident reporting: Standard Government Form 0051 (AVIR) was historically processed on paper, delaying mechanical assessments and legal reporting.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Jose JWT Authentication",
+        description:
+          "Lightweight custom auth middleware facilitating role-based route protection across 9 administrative and applicant divisions.",
+      },
+      {
+        title: "Neon Serverless Persistence",
+        description:
+          "PostgreSQL instance managed via Prisma ORM for tracking registrations, audit logs, and fee payments.",
+      },
+      {
+        title: "S3 Direct Document Uploads",
+        description:
+          "Secure storage system for corporate certificates and physical park photos required for inspector verification.",
+      },
+    ],
+    testimonial: {
+      quote: "",
+      author: "",
+      authorTitle: "",
+    },
+    featured: true,
+  },
 ];
+

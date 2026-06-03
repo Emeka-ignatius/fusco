@@ -252,28 +252,30 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                 </p>
 
                 {/* Testimonial Quote */}
-                <div className="bg-card border border-border rounded-xl p-6">
-                  <p className="text-muted-foreground italic leading-relaxed mb-4">
-                    {project.testimonial.quote}
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <div>
-                      <div className="text-sm font-medium text-foreground">
-                        {project.testimonial.author}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {project.testimonial.authorTitle}
+                {project.testimonial && project.testimonial.quote && (
+                  <div className="bg-card border border-border rounded-xl p-6">
+                    <p className="text-muted-foreground italic leading-relaxed mb-4">
+                      {project.testimonial.quote}
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary"></div>
+                      <div>
+                        <div className="text-sm font-medium text-foreground">
+                          {project.testimonial.author}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {project.testimonial.authorTitle}
+                        </div>
                       </div>
                     </div>
+                    {/* Quote marks decoration */}
+                    <div className="flex justify-end mt-2">
+                      <span className="text-6xl text-muted-foreground/20 font-serif leading-none">
+                        "
+                      </span>
+                    </div>
                   </div>
-                  {/* Quote marks decoration */}
-                  <div className="flex justify-end mt-2">
-                    <span className="text-6xl text-muted-foreground/20 font-serif leading-none">
-                      "
-                    </span>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </FadeIn>

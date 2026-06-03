@@ -21,9 +21,9 @@ export function StorySection() {
 
           <FadeIn delay={0.2}>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              After completing my Software Engineering degree, I dove headfirst into the world of professional software
-              development. Over the past four years, I&apos;ve had the privilege of working with startup(s) company each experience teaching me something new about what it takes to build software that
-              truly serves its users.
+              After earning my Advanced Diploma in Software Engineering (ADSE) from APTECH, I dove headfirst into the world of professional software
+              development. Over the past four years, I&apos;ve had the privilege of working with dynamic tech teams, with each experience teaching me something new about what it takes to build software that
+              truly serves its users at scale.
             </p>
           </FadeIn>
 

@@ -78,7 +78,7 @@ export function AboutHero() {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Briefcase className="h-5 w-5 text-primary" />
-                <span>Mid-Level Software Engineer</span>
+                <span>Chief Technology Officer (CTO) & Full Stack Developer</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <GraduationCap className="h-5 w-5 text-primary" />

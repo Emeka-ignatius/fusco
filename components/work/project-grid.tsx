@@ -19,10 +19,15 @@ export function ProjectGrid() {
     ...new Set(projects.map((project) => project.category)),
   ];
 
-  const filteredProjects =
+  const filteredProjects = (
     activeCategory === "All"
       ? projects
-      : projects.filter((project) => project.category === activeCategory);
+      : projects.filter((project) => project.category === activeCategory)
+  ).sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return 0;
+  });
 
   return (
     <section className="py-16 md:py-24">
