@@ -789,7 +789,7 @@ export const projects: Project[] = [
       "Paystack",
       "AVIR Compliance",
     ],
-    liveUrl: "http://ministry-of-transport-web.vercel.app/",
+    liveUrl: "https://mot.anambrastate.gov.ng",
     githubUrl: "https://github.com/iscedcs/ministry-of-transport-web.git",
     challenge:
       "Coordinating complex regulatory workflows across nine distinct user roles with varying permissions, while managing secure upload of large infrastructure photos and corporate credentials without introducing security vulnerabilities or slowing down the serverless backend.",
@@ -821,6 +821,134 @@ export const projects: Project[] = [
         title: "S3 Direct Document Uploads",
         description:
           "Secure storage system for corporate certificates and physical park photos required for inspector verification.",
+      },
+    ],
+    testimonial: {
+      quote: "",
+      author: "",
+      authorTitle: "",
+    },
+    featured: true,
+  },
+  {
+    id: 14,
+    title: "MayRock Family Psychiatry Booking Platform",
+    slug: "mayrock-family-psychiatry",
+    description:
+      "The marketing site and patient booking platform for an outpatient psychiatric practice in Texas, with a custom scheduling wizard, self-pay payment verification, and automated ICD-10 superbill generation.",
+    longDescription:
+      "MayRock Family Psychiatry is a board-certified PMHNP practice serving children (6+), teens, and adults through statewide Texas telehealth and an in-person office in McKinney. The platform pairs a calm, trust-first public site with a complete booking engine and a private admin dashboard that runs the practice's front desk.\n\nPatients explore services by life stage and condition, take a two-minute self-check, then move through a booking wizard that captures appointment type, telehealth or in-person preference, Texas telehealth informed consent, and self-pay payment proof. Behind it, the practice manages availability by day type, approves requests, verifies Zelle and Venmo payments, and issues itemized PDF superbills with ICD-10 and CPT codes so self-pay patients can claim out-of-network reimbursement. The site is installable as a PWA for one-tap booking and telehealth access.",
+    image: "/mayrock-family-psychiatry.png",
+    gallery: [],
+    category: "Healthcare",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "NextAuth",
+      "React PDF",
+      "Resend",
+      "GSAP",
+      "PWA",
+      "Local SEO",
+    ],
+    liveUrl: "https://www.mayrockpsychiatry.com",
+    githubUrl: "#", // Placeholder for now
+    challenge:
+      "People searching for psychiatric care arrive anxious and unsure where to start, so every extra step costs the practice a patient. The practice also had no single place to manage availability, approve bookings, confirm self-pay payments, and produce the insurance paperwork patients needed.",
+    solution:
+      "Built a conversion-focused public site with a two-minute self-check and a multi-step booking wizard that handles state licensure, visit type, telehealth consent, and payment proof in one flow, backed by an admin dashboard for availability, approvals, payment verification, and one-click superbill PDFs.",
+    results: [
+      { value: "2-Min", label: "SELF-CHECK TO BOOKING" },
+      { value: "ICD-10", label: "AUTOMATED SUPERBILLS" },
+      { value: "Statewide", label: "TEXAS TELEHEALTH" },
+    ],
+    year: "2026",
+    painPoints: [
+      "High-friction intake: prospective patients had no guided path from a first worry to a booked evaluation, losing people at the moment they were ready to ask for help.",
+      "Manual front desk: availability, booking approvals, and self-pay payment confirmation were handled by hand across phone, email, and messaging apps.",
+      "Insurance paperwork: self-pay patients needed itemized superbills with diagnosis and procedure codes for out-of-network claims, previously produced manually for every visit.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Multi-Step Booking Wizard",
+        description:
+          "Guided intake capturing visit type, telehealth or in-person preference, Texas telehealth informed consent, and self-pay payment proof in a single validated flow.",
+      },
+      {
+        title: "Superbill PDF Generation",
+        description:
+          "Server-side React PDF pipeline producing itemized superbills with ICD-10 diagnosis and CPT procedure codes for out-of-network reimbursement.",
+      },
+      {
+        title: "Practice Admin Dashboard",
+        description:
+          "Authenticated console for managing telehealth and in-office day types, approving appointment requests, verifying payments, and triggering patient notifications.",
+      },
+    ],
+    testimonial: {
+      quote: "",
+      author: "",
+      authorTitle: "",
+    },
+    featured: true,
+  },
+  {
+    id: 15,
+    title: "Ecclesia DPM - Digital Parish Manager",
+    slug: "ecclesia-dpm",
+    description:
+      "A multi-tenant SaaS platform giving every Catholic parish its own branded digital home, with daily liturgy, Mass livestreaming, intentions, appointments, and secure recurring giving.",
+    longDescription:
+      "Ecclesia is a Digital Parish Manager built as a multi-tenant product: one platform, a branded space per parish, and a subscription that scales from a single outstation to a multi-parish diocese. Parishioners find their own congregation through a parish directory and see only its events, updates, and stewardship opportunities.\n\nThe platform opens on the day's liturgy — gospel, first reading, psalm, liturgical season and colour — refreshed daily against the Church calendar, with a community feed for reflections and prayer intentions. Parishes get Mass intentions, priest appointment scheduling for confession and counselling, event registration, volunteer sign-ups, announcements with push notifications, livestreamed Mass with interactive chat, and digital giving by card, bank transfer, USSD, and direct debit through Paystack and Flutterwave. Plans run from a free tier for small outstations to enterprise rollouts for dioceses, with CSV-based migration for existing parish records.",
+    image: "/ecclesia-dpm.png",
+    gallery: [],
+    category: "SaaS & Community",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Multi-Tenant SaaS",
+      "Paystack",
+      "Flutterwave",
+      "Recurring Billing",
+      "Live Streaming",
+      "Push Notifications",
+      "Liturgical Calendar",
+    ],
+    liveUrl: "https://ecclesialight.com",
+    githubUrl: "#", // Placeholder for now
+    challenge:
+      "Parish life runs on work that does not scale by hand — intentions, bulletins, appointment requests, volunteer rotas, and the collection — while no single parish can justify its own developer or its own platform.",
+    solution:
+      "Built one multi-tenant platform where each parish gets a branded, data-isolated space, combined daily liturgical content and livestreaming to keep parishioners engaged between services, and layered subscription tiers so the same product serves a small outstation and a full diocese.",
+    results: [
+      { value: "Multi-Tenant", label: "PARISH-SCOPED DATA" },
+      { value: "Daily", label: "LITURGY & READINGS" },
+      { value: "4 Channels", label: "DIGITAL GIVING" },
+    ],
+    year: "2026",
+    painPoints: [
+      "Disconnected communities: parishioners who travel, move, or cannot attend in person lose touch with their parish entirely.",
+      "Manual parish office: Mass intentions, announcements, appointments, and volunteer coordination were tracked on paper and in group chats.",
+      "Opaque stewardship: cash-only collections left parishes without reconciled records or any way to support recurring giving.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Multi-Tenant Parish Isolation",
+        description:
+          "Each parish gets a branded space with its own members, events, and records, scoped and access-controlled so no data crosses tenant boundaries.",
+      },
+      {
+        title: "Liturgical Content Engine",
+        description:
+          "Daily readings, psalm, gospel, saint reflections, and liturgical season and colour, resolved against the Church calendar and surfaced on every parish home page.",
+      },
+      {
+        title: "Multi-Gateway Giving",
+        description:
+          "One-off and recurring donations through Paystack and Flutterwave, covering card, bank transfer, USSD, and direct debit, alongside tiered subscription billing.",
       },
     ],
     testimonial: {
