@@ -55,7 +55,7 @@ export const projects: Project[] = [
       "Redis",
       "Interswitch"
     ],
-    liveUrl: "https://www.transpayedo.com",
+    liveUrl: "https://www.transpaytms.com/",
     githubUrl: "https://github.com/iscedcs/transpay-edo.git", // Placeholder for now
     challenge:
       "The existing infrastructure was literally buckling under the weight of new user registrations. We weren\\'t just fixing bugs; we were fighting a battle against technical debt that threatened the entire regional expansion strategy.",
@@ -525,57 +525,64 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    title: "PennyPlan - Financial Management App",
+    title: "PennyPlan - The Money Diary That Listens",
     slug: "pennyplan",
     description:
-      "An effortless expense tracking and budgeting tool designed to help users take control of their finances and achieve financial freedom.",
+      "A money diary that logs spending from typed text, voice notes in your own language, or forwarded bank alerts, then tells you what is safe to spend today.",
     longDescription:
-      "PennyPlan is a user-friendly financial management application that empowers individuals to effortlessly track expenses, create smart budgets, and achieve their financial goals. It offers powerful features like intelligent budgeting that adapts to spending habits, actionable insights through interactive charts, and goal-driven planning with guided milestones. The platform aims to simplify personal finance, making it accessible and manageable for everyone.",
-    image: "/pennyplan.png", // Placeholder image
+      "PennyPlan v2 is a ground-up rebuild of the original budgeting app, reimagined as a money diary for how people actually spend. Money moves through mobile wallets, bank apps, cash, and community savings circles such as ajo, so the diary pulls all of it into one place instead of asking users to maintain a spreadsheet.\n\nEntries can be typed in plain language (\"rice 4500\"), spoken in English, Pidgin, Yoruba, Igbo, or Hausa, logged over WhatsApp, or created automatically by forwarding a bank alert. A daily safe-to-spend figure, derived from a weekly limit and built for irregular income, shows what is left without any budgeting setup, and spending insights flag shifts such as rising weekly transport costs. PennyPlan never asks for bank logins and never holds funds. An organisations tier lets cooperatives, employers, and microfinance banks give members a diary while seeing only anonymous group trends.",
+    image: "/pennyplan-v2.png",
     gallery: [],
     category: "FinTech",
-    tags: ["React", "Server Action", "Financial Tracking", "Budgeting", "PWA"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Voice Logging",
+      "WhatsApp Integration",
+      "Bank Alert Parsing",
+      "PWA",
+      "Offline Sync",
+    ],
     liveUrl: "https://pennyplan.com.ng/",
     githubUrl: "https://github.com/Emeka-ignatius/penny-plan",
     challenge:
-      "To develop an intuitive and effective personal finance application that simplifies expense tracking and budgeting, encouraging users to achieve their financial goals.",
+      "Traditional budgeting apps demand constant manual entry and assume steady monthly salaries, so people with irregular income, split across wallets, banks, cash, and community savings, abandon them within weeks.",
     solution:
-      "Built a cross-platform application with a clean interface, robust backend for data synchronization, and engaging visualizations of financial trends. Focused on ease of use and providing clear, actionable financial insights.",
+      "Rebuilt PennyPlan around zero-friction capture: natural-language and multilingual voice entry, WhatsApp logging, bank alert parsing, and offline-first sync, paired with a single safe-to-spend number that replaces category-by-category budgeting.",
     results: [
-      { value: "Improved", label: "FINANCIAL HEALTH" },
-      { value: "Actionable", label: "SPENDING INSIGHTS" },
-      { value: "Goal-Driven", label: "FINANCIAL PLANNING" },
+      { value: "5 Languages", label: "VOICE LOGGING" },
+      { value: "<1 Min", label: "TO FIRST ENTRY" },
+      { value: "Daily", label: "SAFE-TO-SPEND FIGURE" },
     ],
-    year: "2025",
+    year: "2026",
     painPoints: [
-      "Difficulty in consistently tracking daily expenses and understanding spending patterns.",
-      "Lack of effective budgeting tools that adapt to individual financial habits.",
-      "Overwhelming complexity of traditional financial management software.",
+      "Fragmented money: spending is scattered across bank apps, mobile wallets, cash, and community savings, so no one place shows where it all went.",
+      "High-effort tracking: forms and category pickers make daily logging a chore that people stop doing.",
+      "Salary-based budgets: irregular and weekly income breaks the monthly-budget model most finance apps assume.",
     ],
     architectureFeatures: [
       {
-        title: "Intuitive Expense Logging",
+        title: "Multi-Channel Capture",
         description:
-          "Streamlined process for logging and categorizing expenses, making financial tracking effortless.",
+          "Typed natural language, voice in English, Pidgin, Yoruba, Igbo, and Hausa, WhatsApp messages, and forwarded bank alerts all resolve into the same structured diary entry, with undo by reply.",
       },
       {
-        title: "Dynamic Budgeting Engine",
+        title: "Safe-to-Spend Engine",
         description:
-          "Intelligent system that creates and adjusts budgets based on user spending, promoting realistic financial goals.",
+          "Turns a weekly limit and logged spending into one daily figure designed for irregular income, with insights that flag changes in spending patterns.",
       },
       {
-        title: "Interactive Financial Visualizations",
+        title: "Privacy-First Organisations Tier",
         description:
-          "Clear and engaging charts and graphs that provide users with actionable insights into their financial health.",
+          "Cooperatives, employers, and microfinance banks can offer members a diary and see only anonymised group trends, never individual entries, with no bank logins or held funds.",
       },
     ],
     testimonial: {
-      quote:
-        "Penny Plan has transformed how I manage my business finances. The insights it provides are invaluable!",
-      author: "Made Of Roses",
-      authorTitle: "Small Business Owner",
+      quote: "",
+      author: "",
+      authorTitle: "",
     },
-    featured: false,
+    featured: true,
   },
   {
     id: 10,
@@ -773,7 +780,7 @@ export const projects: Project[] = [
       "A public services portal and administrative dashboard for transit operations, motor park registration, and compliance management.",
     longDescription:
       "The Ministry of Transport Platform is a comprehensive digital GovTech solution designed for regulating state transportation networks. Built as a high-performance Next.js portal, it facilitates motor park registration and inspection workflows, Mass Transit terminal administration, and accident vehicle reporting (AVIR). The application features custom JWT-based authentication across nine distinct roles—ranging from external park owners to transit operators, inspectors, and the Commissioner—providing secure auditing, Paystack fee collection, and AWS S3 document management for verified operators.",
-    image: "/mot.png",
+    image: "/ministryoftransport.png",
     gallery: [],
     category: "GovTech & Transit",
     tags: [
@@ -949,6 +956,66 @@ export const projects: Project[] = [
         title: "Multi-Gateway Giving",
         description:
           "One-off and recurring donations through Paystack and Flutterwave, covering card, bank transfer, USSD, and direct debit, alongside tiered subscription billing.",
+      },
+    ],
+    testimonial: {
+      quote: "",
+      author: "",
+      authorTitle: "",
+    },
+    featured: true,
+  },
+  {
+    id: 16,
+    title: "Richards Consultant - Brokerage & Market Analysis",
+    slug: "richards-consultant",
+    description:
+      "A credibility-first website for an agent, broker, and analyst firm in wholesale electronic markets, with a market ticker, expertise pages, and consultation booking.",
+    longDescription:
+      "Richards Consultant is a brokerage, agency, and market analysis firm based in London, Ontario, serving businesses that need volume moved and markets read. The site is designed to feel like a trading desk: a deep navy and gold palette, an editorial serif headline, and a scrolling market ticker in monospaced type that sets the tone before a visitor reads a word.\n\nThe site explains the three service lines of brokerage, agency, and market analysis, and the markets they cover: industrial metals, wholesale energy, electronic components, agricultural goods, freight and logistics, chemicals, packaging, and cross-border trade. A gallery of ports, skylines, and trading screens adds visual weight, and a clear Book a consultation call to action offers a free 30-minute discussion, so a visitor can go from first impression to a scheduled conversation in a couple of clicks.",
+    image: "/richardanalyst.png",
+    gallery: [],
+    category: "Business & Finance",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Editorial Design",
+      "Consultation Booking",
+      "SEO",
+    ],
+    liveUrl: "https://www.richardsanalyst.ca",
+    githubUrl: "#", // Placeholder for now
+    challenge:
+      "A solo consultancy selling trust to B2B buyers needs to look established the moment a prospect lands, and make the next step, a conversation, obvious, without a large team or a heavy corporate site.",
+    solution:
+      "Designed a restrained, editorial brand system with a trading-desk ticker, clearly separated service and market-coverage pages, and a persistent booking call to action, so prospects understand the offer quickly and can book a free consultation.",
+    results: [
+      { value: "3 Services", label: "BROKERAGE, AGENCY, ANALYSIS" },
+      { value: "8 Markets", label: "SECTORS COVERED" },
+      { value: "30-Min", label: "FREE CONSULTATION" },
+    ],
+    year: "2026",
+    painPoints: [
+      "Trust gap: B2B buyers move volume only with firms that look credible, and a generic template does not signal market expertise.",
+      "Unclear offer: brokerage, agency, and analysis are easily confused, so prospects could not tell which service fit their need.",
+      "Friction to first contact: no direct path from interest to a scheduled conversation.",
+    ],
+    architectureFeatures: [
+      {
+        title: "Trading-Desk Brand System",
+        description:
+          "Navy and gold palette, serif display type, and monospaced data styling that make the site feel like a market terminal rather than a brochure.",
+      },
+      {
+        title: "Market Ticker",
+        description:
+          "Animated scrolling ticker of illustrative market figures, clearly labelled as sample data, that conveys market fluency at a glance.",
+      },
+      {
+        title: "Consultation Booking Flow",
+        description:
+          "Persistent Book call to action in the header and hero that leads to a free 30-minute consultation request.",
       },
     ],
     testimonial: {

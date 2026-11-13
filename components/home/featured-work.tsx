@@ -23,12 +23,12 @@ const featuredProject = {
 
 const secondaryProjects = [
   {
-    title: "Whiten Lighten Dental Practice Management",
+    title: "PennyPlan - The Money Diary That Listens",
     description:
-      "A bespoke Electronic Medical Records (EMR) system for a celebrity dental practice, streamlining patient management, appointments, and treatment plans.",
-    categories: ["Healthcare", "EMR"],
-    techStack: ["Next.js", "Node.js", "PostgreSQL"],
-    slug: "whiten-lighten-emr",
+      "A money diary that logs spending from typed text, voice notes in your own language, or forwarded bank alerts, then tells you what is safe to spend today.",
+    categories: ["FinTech", "Personal Finance"],
+    techStack: ["Next.js", "TypeScript", "PWA"],
+    slug: "pennyplan",
   },
   {
     title: "PalmTechnIQ E-Learning Platform",
