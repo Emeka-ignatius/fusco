@@ -172,6 +172,6 @@ This project is licensed under the MIT License.
 **Ignatius Emeka Joshua (FUSCO)**
 
 - Email: info@websync.com.ng
-- GitHub: [@emeka-ignatius](https://github.com/emeka-ignatius)
-- LinkedIn: [Ignatius Emeka Joshua](https://linkedin.com/in/fusco)
-- Twitter: [@fusco_dev](https://twitter.com/fusco_dev)
+- GitHub: [@emeka-ignatius](https://github.com/Emeka-ignatius)
+- LinkedIn: [Ignatius Emeka Joshua](https://www.linkedin.com/in/emeka-ignatius)
+- Twitter: [@OfficialFusco](https://x.com/OfficialFusco)
